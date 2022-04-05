@@ -134,6 +134,12 @@ func (c *service) CreateJavaJobParams(params Params) error {
 				Command: params.Command,
 			},
 		},
+		//修改标记，新增了Builders标签的内容
+		Builders: Postbuilders{
+			HudsonTasksShell: HudsonTasksShell{
+				Command: params.Command,
+			},
+		},
 		RunPostStepsIfResult: RunPostStepsIfResult{
 			Name:          "Success",
 			Ordinal:       "0",
